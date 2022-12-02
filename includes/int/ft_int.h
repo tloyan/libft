@@ -6,13 +6,14 @@
 /*   By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:58:58 by thloyan           #+#    #+#             */
-/*   Updated: 2022/12/01 18:00:31 by thloyan          ###   ########.fr       */
+/*   Updated: 2022/12/02 20:06:44 by thloyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_INT_H
 # define FT_INT_H
 
+int		ft_intlen(int n);
 char	*ft_itoa(int n);
 
 #endif

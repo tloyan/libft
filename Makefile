@@ -6,7 +6,7 @@
 #    By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 14:07:47 by thloyan           #+#    #+#              #
-#    Updated: 2022/12/01 18:28:45 by thloyan          ###   ########.fr        #
+#    Updated: 2022/12/02 20:13:21 by thloyan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ CFLAGS = -Wall -Wextra -Werror
 OBJDIR = objs
 
 PATH_INT =	srcs/int
-FILE_INT =	ft_itoa.c
+FILE_INT =	ft_intlen.c ft_itoa.c 
 OBJ_INT = $(addprefix $(OBJDIR)/, $(FILE_INT:.c=.o))
 
 PATH_IO =	srcs/io
