@@ -6,7 +6,7 @@
 /*   By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:14:05 by thloyan           #+#    #+#             */
-/*   Updated: 2022/12/01 17:14:06 by thloyan          ###   ########.fr       */
+/*   Updated: 2022/12/04 17:45:14 by thloyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 	char			*str;
 
-	str = ft_calloc(ft_strlen(s) + 1, sizeof(*str));
+	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(*str));
 	if (!str)
 		return (NULL);
 	i = 0;
@@ -26,5 +26,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = 0;
 	return (str);
 }

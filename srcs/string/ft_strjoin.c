@@ -6,7 +6,7 @@
 /*   By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:13:51 by thloyan           #+#    #+#             */
-/*   Updated: 2022/12/01 17:13:52 by thloyan          ###   ########.fr       */
+/*   Updated: 2022/12/04 18:27:02 by thloyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*dst;
+	size_t	s1_len;
 	size_t	len;
 
-	len = ft_strlen(s1) + ft_strlen(s2);
-	dst = (char *)ft_calloc(len + 1, sizeof(*dst));
+	s1_len = ft_strlen(s1);
+	len = s1_len + ft_strlen(s2);
+	dst = (char *)malloc((len + 1) * sizeof(*dst));
 	if (!dst)
 		return (NULL);
-	ft_strlcat(dst, s1, (len + 1));
+	dst[len] = 0;
+	dst[s1_len] = 0;
+	ft_strlcat(dst, s1, (s1_len + 1));
 	ft_strlcat(dst, s2, (len + 1));
 	return (dst);
 }

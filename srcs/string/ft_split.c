@@ -6,7 +6,7 @@
 /*   By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:09:51 by thloyan           #+#    #+#             */
-/*   Updated: 2022/12/01 17:10:10 by thloyan          ###   ########.fr       */
+/*   Updated: 2022/12/04 17:47:15 by thloyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ static char	*nextword(char const *s, char c, int *cur)
 		*cur = *cur + 1;
 	while (s[*cur + wlen] != c && s[*cur + wlen] != 0)
 		wlen++;
-	w = ft_calloc(wlen + 1, sizeof(*w));
+	w = (char *)malloc((wlen + 1) * sizeof(*w));
 	if (!w)
 		return (NULL);
 	while (i < wlen)
@@ -70,7 +70,7 @@ char	**ft_split(char const *s, char c)
 	int		cursor;
 
 	n = wordcount(s, c);
-	strs = ft_calloc(n + 1, sizeof(*strs));
+	strs = (char **)malloc((n + 1) * sizeof(*strs));
 	if (!strs)
 		return (NULL);
 	i = 0;

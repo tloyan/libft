@@ -6,7 +6,7 @@
 /*   By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 16:36:02 by thloyan           #+#    #+#             */
-/*   Updated: 2022/12/01 16:36:04 by thloyan          ###   ########.fr       */
+/*   Updated: 2022/12/04 17:39:18 by thloyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s)
 	char	*dst;
 	int		i;
 
-	dst = (char *)ft_calloc((ft_strlen(s) + 1), sizeof(*s));
+	dst = (char *)malloc((ft_strlen(s) + 1) * sizeof(*s));
 	if (!dst)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 17:14:54 by thloyan           #+#    #+#             */
-/*   Updated: 2022/12/01 17:14:55 by thloyan          ###   ########.fr       */
+/*   Updated: 2022/12/04 17:44:20 by thloyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		maxlen = 0;
 	if (len < maxlen)
 		maxlen = len;
-	dst = (char *)ft_calloc(maxlen + 1, sizeof(*dst));
+	dst = (char *)malloc((maxlen + 1) * sizeof(*dst));
 	if (!dst)
 		return (NULL);
+	dst[maxlen] = 0;
 	while (maxlen--)
 		dst[maxlen] = s[start + maxlen];
 	return (dst);
