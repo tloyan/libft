@@ -6,7 +6,7 @@
 #    By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 14:07:47 by thloyan           #+#    #+#              #
-#    Updated: 2022/12/02 20:13:21 by thloyan          ###   ########.fr        #
+#    Updated: 2022/12/17 16:34:42 by thloyan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -107,7 +107,7 @@ $(OBJDIR)/%.o: $(PATH_STRING)/%.c
 
 clean:
 	rm -f $(OBJS)
-	rmdir $(OBJDIR)
+	rm -rf $(OBJDIR)
 
 fclean: clean
 	rm -f $(NAME)
