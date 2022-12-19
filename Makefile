@@ -6,7 +6,7 @@
 #    By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 14:07:47 by thloyan           #+#    #+#              #
-#    Updated: 2022/12/17 16:34:42 by thloyan          ###   ########.fr        #
+#    Updated: 2022/12/19 13:15:38 by thloyan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ FILE_LIBC_CTYPE = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 OBJ_LIBC_CTYPE = $(addprefix $(OBJDIR)/, $(FILE_LIBC_CTYPE:.c=.o))
 
 PATH_LIBC_STDLIB = srcs/libc/stdlib
-FILE_LIBC_STDLIB = ft_atoi.c ft_calloc.c
+FILE_LIBC_STDLIB = ft_atoi.c ft_atol.c ft_calloc.c
 OBJ_LIBC_STDLIB = $(addprefix $(OBJDIR)/, $(FILE_LIBC_STDLIB:.c=.o))
 
 PATH_LIBC_STRING = srcs/libc/string

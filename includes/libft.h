@@ -6,7 +6,7 @@
 /*   By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/01 14:37:47 by thloyan           #+#    #+#             */
-/*   Updated: 2022/12/02 20:13:49 by thloyan          ###   ########.fr       */
+/*   Updated: 2022/12/19 16:19:31 by thloyan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include <limits.h>
 # include <string.h>
-# include	<stdlib.h>
-# include	<unistd.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 # include "libc/ft_libc_ctype.h"
 # include "libc/ft_libc_stdlib.h"
