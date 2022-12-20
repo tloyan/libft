@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+         #
+#    By: tloyan <tloyan@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 14:07:47 by thloyan           #+#    #+#              #
-#    Updated: 2022/12/19 13:15:38 by thloyan          ###   ########.fr        #
+#    Updated: 2022/12/20 12:51:58 by tloyan           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ FILE_INT =	ft_intlen.c ft_itoa.c
 OBJ_INT = $(addprefix $(OBJDIR)/, $(FILE_INT:.c=.o))
 
 PATH_IO =	srcs/io
-FILE_IO =	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c
+FILE_IO =	ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
+			get_next_line.c
 OBJ_IO = $(addprefix $(OBJDIR)/, $(FILE_IO:.c=.o))
 
 PATH_LIBC_CTYPE = srcs/libc/ctype

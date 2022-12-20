@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tloyan <tloyan@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/01 14:37:47 by thloyan           #+#    #+#             */
-/*   Updated: 2022/12/20 12:50:20 by tloyan           ###   ########.fr       */
+/*   Created: 2022/12/02 16:16:47 by thloyan           #+#    #+#             */
+/*   Updated: 2022/12/20 12:57:31 by tloyan           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-# include <limits.h>
-# include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 4096
+# endif
 
-# include "libc/ft_libc_ctype.h"
-# include "libc/ft_libc_stdlib.h"
-# include "libc/ft_libc_string.h"
-# include "libc/ft_libc_strings.h"
+# ifndef FT_FD_MAX
+#  define FT_FD_MAX 256
+# endif
 
-# include "string/ft_string.h"
-# include "int/ft_int.h"
-# include "io/ft_io.h"
-# include "io/get_next_line.h"
-# include "list/ft_list.h"
+# include "../list/ft_list.h"
+
+char	*get_next_line(int fd);
+int		read_and_stash(t_list **lst, int fd);
+void	create_line(t_list	**lst, char **line);
+void	update_stash(t_list *lst);
+t_list	*ft_lstnew_gnl(t_list **lst, char *buffer);
 
 #endif
