@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tloyan <tloyan@student.42.fr>              +#+  +:+       +#+         #
+#    By: thloyan <thloyan@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 14:07:47 by thloyan           #+#    #+#              #
-#    Updated: 2022/12/20 12:51:58 by tloyan           ###   ########.fr        #
+#    Updated: 2022/12/20 15:09:46 by thloyan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,7 +61,7 @@ OBJ_LIST = $(addprefix $(OBJDIR)/, $(FILE_LIST:.c=.o))
 
 PATH_STRING =	srcs/string
 FILE_STRING =	ft_split.c ft_striteri.c ft_strjoin.c ft_strmapi.c \
-							ft_strtrim.c ft_substr.c
+							ft_strtrim.c ft_strtrim_end.c ft_substr.c
 OBJ_STRING = $(addprefix $(OBJDIR)/, $(FILE_STRING:.c=.o))
 
 OBJS =	$(OBJ_INT) $(OBJ_IO) $(OBJ_LIBC_CTYPE) $(OBJ_LIBC_STDLIB) \
